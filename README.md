@@ -1,15 +1,27 @@
+## Dev Academy Quiz Game Project
 
-    #Friday Group Project: Dev Academy Quiz Game</h2>
-    <p>As part of our Friday Group Project at Dev Academy, our team of 5 set out to create a quiz game for junior developers to learn and have fun.</p>
-    <h3>My Role</h3>
-    <p>I took on the role of Git Lead, frontend developer, and stylist.</p>
-    <h3>MVP</h3>
-    <p>Our Minimum Viable Product (MVP) was to design a quiz with interactive buttons. I'm proud to say that I successfully overcame the challenge of creating the option buttons, which was a tricky task for me!</p>
-    <h3>Future Development</h3>
-    <p>I'm currently updating our code in my personal repository to achieve our stretch goals, including:</p>
-    <ul>
-      <li>Adding more questions to the quiz</li>
-      <li>Implementing a score counter</li>
-      <li>Deducting points for incorrect answers</li>
-    </ul>
+As part of our Friday Group Project at Dev Academy, our team of 5 created a quiz game aimed at helping junior developers learn and enjoy the process.
 
+### My Contributions
+
+I played key roles in the project:
+
+- **Git Lead**: Managed version control and collaboration on GitHub.
+- **Frontend Developer**: Designed and implemented the quiz interface.
+- **Stylist**: Ensured the game's visual appeal and user experience.
+
+### MVP Achievements
+
+Our Minimum Viable Product (MVP) focused on:
+
+- Designing a functional quiz with interactive buttons.
+
+I successfully tackled challenges like creating the option buttons, which was particularly rewarding!
+
+### Future Enhancements
+
+Currently, I'm enhancing the project in my personal repository to achieve our stretch goals:
+
+- Adding more quiz questions.
+- Implementing a score counter feature.
+- Introducing point deductions for incorrect answers.
