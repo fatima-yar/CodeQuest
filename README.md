@@ -1,35 +1,22 @@
-# Boilerplate: Fullstack with Sass
-
-## Setup
-
-### What's included
-
-This repo includes:
-
-* a single, simple API endpoint (`/api/v1/fruits`)
-* a single React component (`<App />`)
-* an example database module (`server/db/fruits.js`)
-* an API client module (`client/apis/fruits.js`)
-* configuration for Vitest and testing library
-* configuration for server-side debugging in VS Code
-* configuration for preprocessing Sass
-
-### Installation
-
-#### **From the Github UI**
-
-See the instructions [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) to use Github's feature to create a new repo from a template.
-
-#### **From the command line**
-
-```
-git clone https://github.com/dev-academy-challenges/boilerplate-fullstack [your-project-name]
-cd [your-project-name]
-npm install # to install dependencies
-npm run dev # to start the dev server
-```
-
-You can find the server running on [http://localhost:3000](http://localhost:3000) and the client running on [http://localhost:5173](http://localhost:5173).
-
----
-[Provide feedback on this repo](https://docs.google.com/forms/d/e/1FAIpQLSfw4FGdWkLwMLlUaNQ8FtP2CTJdGDUv6Xoxrh19zIrJSkvT4Q/viewform?usp=pp_url&entry.1958421517=boilerplate-fullstack)
+<pre>
+  <code>
+    <h2>Friday Group Project: Dev Academy Quiz Game</h2>
+    =====================================
+    <p>As part of our Friday Group Project at Dev Academy, our team of 5 set out to create a quiz game for junior developers to learn and have fun.</p>
+    <h3>My Role</h3>
+    --------------
+    <p>I took on the role of Git Lead, frontend developer, and stylist.</p>
+    <h3>MVP</h3>
+    -----
+    <p>Our Minimum Viable Product (MVP) was to design a quiz with interactive buttons. I'm proud to say that I successfully overcame the challenge of creating the option buttons, which was a tricky task for me!</p>
+    <h3>Future Development</h3>
+    -------------------
+    <p>I'm currently updating our code in my personal repository to achieve our stretch goals, including:</p>
+    <ul>
+      <li>Adding more questions to the quiz</li>
+      <li>Implementing a score counter</li>
+      <li>Deducting points for incorrect answers</li>
+    </ul>
+    <p>Feel free to check out our project and watch it evolve! 🚀</p>
+  </code>
+</pre>
