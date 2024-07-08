@@ -1,5 +1,4 @@
-<pre>
-  <code>
+
     <h2>Friday Group Project: Dev Academy Quiz Game</h2>
     <p>As part of our Friday Group Project at Dev Academy, our team of 5 set out to create a quiz game for junior developers to learn and have fun.</p>
     <h3>My Role</h3>
@@ -13,6 +12,4 @@
       <li>Implementing a score counter</li>
       <li>Deducting points for incorrect answers</li>
     </ul>
-    <p>Feel free to check out our project and watch it evolve! 🚀</p>
-  </code>
-</pre>
+
