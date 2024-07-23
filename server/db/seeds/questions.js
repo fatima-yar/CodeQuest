@@ -15,9 +15,6 @@ export async function seed(knex) {
         answer2: el.answer2,
         answer3: el.answer3,
       },
-      // { id: 1, question: 'banana', correct_answer_id: 1 },
-      // { id: 2, question: 'apple', correct_answer_id: 1 },
-      // { id: 3, question: 'feijoa', correct_answer_id: 1 },
     ])
   }
 }

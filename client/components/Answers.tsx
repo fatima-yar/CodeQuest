@@ -1,12 +1,11 @@
 import AnswerButton from './AnswerButton'
-import { getQuestions } from '../apis/apiClient'
 import { Question } from '../../models/questions'
 import { useState, useEffect } from 'react'
 
 interface Props {
   answer: Question
-  setCurrentQuestion: (num) => void
-  handle
+  setCurrentQuestion: (num: unknown) => void
+  handle: unknown
 }
 
 function shuffleArray<T>(array: T[]) {
@@ -27,16 +26,6 @@ export function Answers({ answer }: Props) {
 
   const first = correct_answer
   console.log('Correct:', correct_answer)
-  // console.log('answers:', answers)
-
-  // const false_Answers = answers.map((el) => {
-  //   return el.falseAnswers
-  // })
-
-  // const second = false_Answers[1]
-  // const arrayFalse = second.map((el) => {
-  //   return el.answer
-  // })
 
   const second = [answer.answer1, answer.answer2, answer.answer3]
 

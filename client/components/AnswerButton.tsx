@@ -8,15 +8,15 @@ interface Options {
 export default function AnswerButton(props: Options) {
   const el = props.element
   const answer = props.answer
-  const [selected, setSelected] = useState(false)
+
+  const [bgColor, setBgColor] = useState('#8FCED5')
 
   function handleClick() {
     if (answer) {
-      setSelected(true)
-      // style={{ background: answer ? '#1CAC78' : '#A9A9A9' }}
+      setBgColor('#02ed9f')
       console.log('Correct Answer Selected')
     } else {
-      setSelected(false)
+      setBgColor('#ff2e51')
       console.log('Incorrect Answer Selected')
     }
   }
@@ -25,7 +25,7 @@ export default function AnswerButton(props: Options) {
     <div className="buttons-container">
       <button
         className="buttons"
-        style={{ background: selected && answer ? '#1CAC78' : '#8FCED5' }}
+        style={{ background: bgColor }}
         onClick={handleClick}
       >
         {el}
