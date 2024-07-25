@@ -41,7 +41,7 @@ export function Answers({ answer }: Props) {
 
   return (
     <>
-      <div className="button-container">
+      <div className="button-container bg-red-800">
         <h1>score:{score}</h1>
         <div className="button">
           {shuffledArray.map((el, index) => {
