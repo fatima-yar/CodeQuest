@@ -6,8 +6,7 @@ interface Options {
 }
 
 export default function AnswerButton(props: Options) {
-  const el = props.element
-  const answer = props.answer
+  const { element, answer } = props
 
   const [bgColor, setBgColor] = useState('#8FCED5')
   const [activeBtn, setActiveBtn] = useState('select')
@@ -15,15 +14,18 @@ export default function AnswerButton(props: Options) {
   function handleClick() {
     if (answer) {
       setBgColor('#02ed9f')
+      setActiveBtn('selected')
       console.log('Correct Answer Selected')
     } else {
       setBgColor('#ff2e51')
+      setActiveBtn('selected')
       console.log('Incorrect Answer Selected')
+
+      setTimeout(() => {
+        setBgColor('#8FCED5')
+        setActiveBtn('select')
+      }, 500)
     }
-    setTimeout(() => {
-      setBgColor('#8FCED5')
-      setActiveBtn('select')
-    }, 1000)
   }
 
   return (
@@ -34,7 +36,7 @@ export default function AnswerButton(props: Options) {
         onClick={handleClick}
         disabled={activeBtn === 'selected'}
       >
-        {el}
+        {element}
       </button>
     </div>
   )
