@@ -1,69 +1,69 @@
 {
   "questions": [
-    {"question": "What is the output of console.log(typeof null)?",
+    {"question": "1- What is the output of console.log(typeof null)?",
     "correct_answer": "object",
     "answer1":"null",
     "answer2":"undefined",
     "answer3":"function"
   },
   {
-    "question": "Which method is used to add one or more elements to the end of an array in JavaScript?",
+    "question": "2- Which method is used to add one or more elements to the end of an array in JavaScript?",
     "correct_answer":"push",
     "answer1":"pop",
     "answer2":"shift",
     "answer3":"unshift"
   },
   {
-    "question": "How do you create a new object in JavaScript?",
+    "question": "3- How do you create a new object in JavaScript?",
     "correct_answer":"let obj = {};",
     "answer1":"let obj = Object.create();",
     "answer2":"let obj = new Object[];",
     "answer3":"let obj = new[]"
   },
   {
-    "question": "Which of the following is not a primitive data type in JavaScript?",
+    "question": "4- Which of the following is not a primitive data type in JavaScript?",
     "correct_answer":"array",
     "answer1":"boolean",
     "answer2":"number",
     "answer3":"string"
   },
   {
-    "question": "How can you convert a string to a number in JavaScript?",
+    "question": "5- How can you convert a string to a number in JavaScript?",
     "correct_answer":"Number('123')",
     "answer1":"Parse.Int('123')",
     "answer2":"parseString('123')",
     "answer3":"String.toNumber('123')"
   },
   {
-    "question": "What is the output of console.log('5' + 2)?",
+    "question": "6- What is the output of console.log('5' + 2)?",
     "correct_answer":"52",
     "answer1":"7",
     "answer2":"NaN",
     "answer3":"undefined"
   },
   {
-    "question": "Which keyword is used to declare a variable that cannot be reassigned?",
+    "question": "7- Which keyword is used to declare a variable that cannot be reassigned?",
     "correct_answer":"const",
     "answer1":"let",
     "answer2":"var",
     "answer3":"static"
   },
   {
-    "question": "What will the following code return: Boolean('false')?",
+    "question": "8- What will the following code return: Boolean('false')?",
     "correct_answer":"true",
     "answer1":"false",
     "answer2":"null",
     "answer3":"undefined"
   },
   {
-    "question": "Which of the following is the correct way to write an arrow function in JavaScript?",
+    "question": "9- Which of the following is the correct way to write an arrow function in JavaScript?",
     "correct_answer":"const add = (a, b) => a + b;",
     "answer1":"const add = (a, b) => { return a + b }",
     "answer2":"const add = (a, b) -> a + b;",
     "answer3":"const add = (a, b) -> { return a + b }"
   },
   {
-    "question": "How do you check if a variable x is an array in JavaScript?",
+    "question": "10 -How do you check if a variable x is an array in JavaScript?",
     "correct_answer":"Array.isArray(x)",
     "answer1":"x.isArray()",
     "answer2":"x instanceof Array",

@@ -27,6 +27,7 @@
     ]
   },
   "dependencies": {
+    "canvas-confetti": "^1.9.3",
     "express": "^4.17.2",
     "knex": "^2.5.1",
     "sqlite3": "^5.1.6",
