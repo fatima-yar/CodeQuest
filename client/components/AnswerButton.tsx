@@ -10,6 +10,7 @@ export default function AnswerButton(props: Options) {
   const answer = props.answer
 
   const [bgColor, setBgColor] = useState('#8FCED5')
+  const [activeBtn, setActiveBtn] = useState('select')
 
   function handleClick() {
     if (answer) {
@@ -19,6 +20,10 @@ export default function AnswerButton(props: Options) {
       setBgColor('#ff2e51')
       console.log('Incorrect Answer Selected')
     }
+    setTimeout(() => {
+      setBgColor('#8FCED5')
+      setActiveBtn('select')
+    }, 1000)
   }
 
   return (
@@ -27,6 +32,7 @@ export default function AnswerButton(props: Options) {
         className="buttons"
         style={{ background: bgColor }}
         onClick={handleClick}
+        disabled={activeBtn === 'selected'}
       >
         {el}
       </button>
