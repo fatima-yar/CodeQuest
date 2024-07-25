@@ -3,10 +3,11 @@ import { useState } from 'react'
 interface Options {
   element: string
   answer: boolean
+  onSelect: (selectedAnswer: string) => void
 }
 
 export default function AnswerButton(props: Options) {
-  const { element, answer } = props
+  const { element, answer, onSelect } = props
 
   const [bgColor, setBgColor] = useState('#8FCED5')
   const [activeBtn, setActiveBtn] = useState('select')
@@ -15,11 +16,11 @@ export default function AnswerButton(props: Options) {
     if (answer) {
       setBgColor('#02ed9f')
       setActiveBtn('selected')
-      console.log('Correct Answer Selected')
+      // console.log('Correct Answer Selected')
     } else {
       setBgColor('#ff2e51')
       setActiveBtn('selected')
-      console.log('Incorrect Answer Selected')
+      // console.log('Incorrect Answer Selected')
 
       setTimeout(() => {
         setBgColor('#8FCED5')
@@ -27,13 +28,16 @@ export default function AnswerButton(props: Options) {
       }, 500)
     }
   }
-
+  function handleCombinedClick() {
+    handleClick()
+    onSelect(element)
+  }
   return (
     <div className="buttons-container">
       <button
         className="buttons"
         style={{ background: bgColor }}
-        onClick={handleClick}
+        onClick={handleCombinedClick}
         disabled={activeBtn === 'selected'}
       >
         {element}

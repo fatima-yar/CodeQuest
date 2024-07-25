@@ -1,11 +1,9 @@
 import AnswerButton from './AnswerButton'
 import { Question } from '../../models/questions'
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 interface Props {
   answer: Question
-  setCurrentQuestion: (num: unknown) => void
-  handle: unknown
 }
 
 function shuffleArray<T>(array: T[]) {
@@ -18,36 +16,42 @@ function shuffleArray<T>(array: T[]) {
   return array
 }
 
-// const answers = getQuestions()
-
 export function Answers({ answer }: Props) {
   const correct_answer = answer['correct_answer']
   // IGNORE THIS ERROR ^
+  const [score, setScore] = useState(0)
+  const [shuffledArray, setShuffledArray] = useState<string[]>([])
 
-  const first = correct_answer
-  console.log('Correct:', correct_answer)
+  const handleAnswerSelection = (selectedAnswer: string) => {
+    if (selectedAnswer === correct_answer) {
+      console.log('Correct Answer Selected:', correct_answer)
 
-  const second = [answer.answer1, answer.answer2, answer.answer3]
-
-  const array = [...second, first]
-
-  const shuffledArray = shuffleArray([...array])
-  const [currentQuestion, setCurrentQuestionState] = useState(0)
+      setScore(score + 5)
+    } else {
+      console.log('Incorrect Answer Selected:', selectedAnswer)
+      setScore(score - 2)
+    }
+  }
   useEffect(() => {
-    setCurrentQuestionState(currentQuestion + 1)
+    const first = correct_answer
+    const second = [answer.answer1, answer.answer2, answer.answer3]
+    const array = [...second, first]
+    setShuffledArray(shuffleArray([...array]))
   }, [answer])
 
   return (
     <>
       <div className="button-container">
+        <h1>score:{score}</h1>
         <div className="button">
           {shuffledArray.map((el, index) => {
             return (
               <AnswerButton
-                answer={el === first}
+                key={`${el}-${index}`}
                 element={el}
-                key={`${currentQuestion}-${index}`}
-              /> // Unique key for each question />
+                answer={el === correct_answer}
+                onSelect={handleAnswerSelection}
+              />
             )
           })}
         </div>
