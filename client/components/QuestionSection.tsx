@@ -11,28 +11,38 @@ interface Props {
 export default function QuestionSection(props: Props) {
   const { questions, onSelect } = props
   const [currentQuestion, setCurrentQuestion] = useState(0)
-
   const [score, setScore] = useState(0)
+
   const questionObj = questions[currentQuestion]
 
   const handleNextQuestion = () => {
     setCurrentQuestion((prevIndex) => {
       const newIndex = prevIndex + 1
 
-      if (newIndex === questions.length) {
+      if (newIndex >= questions.length) {
         // Trigger confetti celebration
-        // confetti({
-        //   particleCount: 200,
-        //   spread: 70,
-        //   origin: { y: 0.6 },
-        // })
-        alert(`Your final score is: ${score}`)
+        confetti({
+          particleCount: 200,
+          spread: 70,
+          origin: { y: 0.6 },
+        })
+        alert(`Congrate! Your final score is: ${score}`)
         console.log('Final Score:', score)
+
+        return prevIndex
       }
 
-      // Return the new index
       return newIndex
     })
+  }
+
+  // Render a message if the quiz is finished
+  if (currentQuestion >= questions.length) {
+    return (
+      <div className="text-center mt-8 text-2xl">
+        Quiz completed! Your final score is: {score}
+      </div>
+    )
   }
 
   return (
