@@ -1,6 +1,6 @@
-## Dev Academy Quiz Game Project
+## Code Quest Project
 
-As part of our Friday Group Project at Dev Academy, our team of 5 created a quiz game aimed at helping junior developers learn and enjoy the process.
+Code Quest was a group project completed during Dev Academy. Our team of five decided to create a quiz application, aiming to make it both fun and instructive for users and ourselves. We had to finish it in just one day!
 
 ### My Contributions
 
@@ -18,10 +18,20 @@ Our Minimum Viable Product (MVP) focused on:
 
 I successfully tackled challenges like creating the option buttons, which was particularly rewarding!
 
-### Future Enhancements
+## Development Overview:
+- Backend: We used SQLite and Knex for the backend.
+- Frontend: React and CSS were employed to build the user interface.
 
-Currently, I'm enhancing the project in my personal repository to achieve our stretch goals:
+We designed the quiz to present questions with one correct answer always placed at the first index of the answer array, along with three incorrect answers. To ensure the correct answer was not always option A, we implemented a shuffle function to randomize the order of answer options before displaying them on the screen.
 
-- Adding more quiz questions.
-- Implementing a score counter feature.
-- Introducing point deductions for incorrect answers.
+However after my graduation I decited to update this app.
+## Post-Graduation Enhancements:
+- Code Cleanup: Removed unnecessary code to streamline the application.
+- Scoring System: Added a feature to track scores, with +5 points for correct answers and -2 points for incorrect answers.
+- Real-Time Scoring: Users' answers contribute to their total score, which is displayed and updated in real-time.
+- Final Score Display: Upon completing the quiz, users are presented with their final score. The app uses confetti to celebrate the end of the quiz and provides an alert with the final score.
+- Landing Page and Routing: Introduced a landing page and implemented routing with conditional rendering.
+- Styling: Updated the design using Tailwind CSS for a modern and responsive look.
+- Celebration Function: Added a confetti celebration effect to enhance the user experience at the end of the quiz.
+
+  This project showcases our ability to develop a functional and engaging quiz application, from initial design and development to post-launch enhancements.
