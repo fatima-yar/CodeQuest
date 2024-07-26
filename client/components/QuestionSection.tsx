@@ -18,15 +18,14 @@ export default function QuestionSection(props: Props) {
   const handleNextQuestion = () => {
     setCurrentQuestion((prevIndex) => {
       const newIndex = prevIndex + 1
-      console.log('New Index:', newIndex) // Debugging line
-      console.log('Questions Length:', questions.length)
+
       if (newIndex === questions.length) {
         // Trigger confetti celebration
-        confetti({
-          particleCount: 200,
-          spread: 70,
-          origin: { y: 0.6 },
-        })
+        // confetti({
+        //   particleCount: 200,
+        //   spread: 70,
+        //   origin: { y: 0.6 },
+        // })
         alert(`Your final score is: ${score}`)
         console.log('Final Score:', score)
       }
@@ -38,18 +37,26 @@ export default function QuestionSection(props: Props) {
 
   return (
     <>
-      <div>Your score: {score}</div>
-      <div className="container-question">
-        <div className="question-box">{questionObj.question}</div>
-      </div>
-      <div>
-        <div className="container-question-button">
-          <button className="next-q-button" onClick={handleNextQuestion}>
+      <div className="grid lg:grid-cols-6 grid-cols-1  gap-4">
+        <div className="font-lilita lg:text-3xl bg-slate-100  p-8 text-center rounded-lg lg:ml-4 lg:col-span-1">
+          <p>Your score: </p>
+          {score}
+        </div>
+        <div className="col-span-1 lg:col-span-4 bg-slate-100 lg:text-2xl text-center p-4 ">
+          <div className="pb-8 pt-8">{questionObj.question}</div>
+          <div className="">
+            <Answers answer={questionObj} score={score} setScore={setScore} />
+          </div>
+        </div>
+        <div className="flex justify-center lg:col-start-6 lg:col-span font-lilita lg:mr-4 mb-8 lg:mb-0">
+          {' '}
+          <button
+            className="bg-black text-white lg:text-3xl p-8 rounded-lg hover:bg-blue-500"
+            onClick={handleNextQuestion}
+          >
             Next Question
           </button>
         </div>
-
-        <Answers answer={questionObj} score={score} setScore={setScore} />
       </div>
     </>
   )

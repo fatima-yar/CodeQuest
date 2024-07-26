@@ -43,19 +43,21 @@ export function Answers({ answer, score, setScore }: Props) {
 
   return (
     <>
-      <div className="button-container">
-        <div className="button">
-          {shuffledArray.map((el, index) => {
-            return (
-              <AnswerButton
-                key={`${el}-${index}`}
-                element={el}
-                answer={el === correct_answer}
-                onSelect={handleAnswerSelection}
-              />
-            )
-          })}
-        </div>
+      <div className="grid lg:grid-cols-2 gap-2">
+        {shuffledArray.map((el, index) => {
+          return (
+            <>
+              <div className="p-2">
+                <AnswerButton
+                  key={`${el}-${index}`}
+                  element={el}
+                  answer={el === correct_answer}
+                  onSelect={handleAnswerSelection}
+                />
+              </div>
+            </>
+          )
+        })}
       </div>
     </>
   )

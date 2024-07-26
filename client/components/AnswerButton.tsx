@@ -33,9 +33,9 @@ export default function AnswerButton(props: Options) {
     onSelect(element)
   }
   return (
-    <div className="buttons-container">
+    <div className="">
       <button
-        className="buttons"
+        className="p-4 lg:w-80  w-56 rounded-xl shadow-xl"
         style={{ background: bgColor }}
         onClick={handleCombinedClick}
         disabled={activeBtn === 'selected'}
