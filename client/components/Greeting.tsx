@@ -34,7 +34,7 @@ function Greeting(props: Props) {
           />
           <button
             type="submit"
-            className="bg-black text-white px-4 py-2 rounded hover:bg-gray-700"
+            className="bg-black text-white px-4 py-2 rounded transform transition-transform duration-300 hover:scale-105 hover:bg-teal-600"
           >
             Lets do it!
           </button>

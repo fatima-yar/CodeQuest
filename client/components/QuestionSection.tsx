@@ -40,7 +40,7 @@ export default function QuestionSection(props: Props) {
       <div className="grid lg:grid-cols-6 grid-cols-1  gap-4">
         <div className="font-lilita lg:text-3xl bg-slate-100  p-8 text-center rounded-lg lg:ml-4 lg:col-span-1">
           <p>Your score: </p>
-          {score}
+          <div className="lg:text-5xl text-2xl text-red-600">{score}</div>
         </div>
         <div className="col-span-1 lg:col-span-4 bg-slate-100 lg:text-2xl text-center p-4 ">
           <div className="pb-8 pt-8">{questionObj.question}</div>

@@ -35,7 +35,7 @@ function Home() {
         ) : (
           <>
             <div className="flex flex-col justify-center items-center ">
-              <div className="w-[60%] text-center mb-4 lg:text-5xl p-4 rounded-lg font-indie ">
+              <div className="w-[60%] text-center mb-4 lg:text-5xl p-4 rounded-lg font-lilita ">
                 <h2>
                   Hello <span className="text-red-600">{name}</span>, let's
                   crush this quiz!{' '}

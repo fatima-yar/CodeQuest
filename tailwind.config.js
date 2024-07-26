@@ -7,6 +7,7 @@ export default {
         russo: ['"Russo One"', 'sans-serif'],
         indie: ['"Indie Flower"', 'sans-serif'],
         lilita: ['"Lilita One"', 'cursive'],
+        sigmarOne: ['"Sigmar One"', 'cursive'],
       },
     },
   },
