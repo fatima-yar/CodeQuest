@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 
 interface Props {
   answer: Question
+  setScore: (score: number) => void
+  score: number
 }
 
 function shuffleArray<T>(array: T[]) {
@@ -16,10 +18,10 @@ function shuffleArray<T>(array: T[]) {
   return array
 }
 
-export function Answers({ answer }: Props) {
+export function Answers({ answer, score, setScore }: Props) {
   const correct_answer = answer['correct_answer']
   // IGNORE THIS ERROR ^
-  const [score, setScore] = useState(0)
+
   const [shuffledArray, setShuffledArray] = useState<string[]>([])
 
   const handleAnswerSelection = (selectedAnswer: string) => {
@@ -42,9 +44,6 @@ export function Answers({ answer }: Props) {
   return (
     <>
       <div className="button-container">
-        <div className="score-container">
-          <h1>score:{score}</h1>
-        </div>
         <div className="button">
           {shuffledArray.map((el, index) => {
             return (

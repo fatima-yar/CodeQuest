@@ -5,27 +5,30 @@ import confetti from 'canvas-confetti'
 
 interface Props {
   questions: Question[]
+  onSelect: (score: number) => void
 }
 
-export default function QuestionSection({ questions }: Props) {
+export default function QuestionSection(props: Props) {
+  const { questions, onSelect } = props
   const [currentQuestion, setCurrentQuestion] = useState(0)
+
+  const [score, setScore] = useState(0)
   const questionObj = questions[currentQuestion]
 
-  // const handleNextQuestion = () => {
-  //   setCurrentQuestion((currentQuestion + 1) % questions.length)
-  // }
   const handleNextQuestion = () => {
     setCurrentQuestion((prevIndex) => {
       const newIndex = prevIndex + 1
-
-      // Check if the new index is 10 and trigger the celebration
-      if (newIndex === 10) {
+      console.log('New Index:', newIndex) // Debugging line
+      console.log('Questions Length:', questions.length)
+      if (newIndex === questions.length) {
         // Trigger confetti celebration
         confetti({
           particleCount: 200,
           spread: 70,
           origin: { y: 0.6 },
         })
+        alert(`Your final score is: ${score}`)
+        console.log('Final Score:', score)
       }
 
       // Return the new index
@@ -35,6 +38,7 @@ export default function QuestionSection({ questions }: Props) {
 
   return (
     <>
+      <div>Your score: {score}</div>
       <div className="container-question">
         <div className="question-box">{questionObj.question}</div>
       </div>
@@ -45,11 +49,7 @@ export default function QuestionSection({ questions }: Props) {
           </button>
         </div>
 
-        <Answers
-          answer={questionObj}
-          setCurrentQuestion={setCurrentQuestion}
-          handle={undefined}
-        />
+        <Answers answer={questionObj} score={score} setScore={setScore} />
       </div>
     </>
   )
