@@ -43,7 +43,7 @@ export function Answers({ answer, score, setScore }: Props) {
 
   return (
     <>
-      <div className="grid lg:grid-cols-2 gap-2 ">
+      <div className="">
         {shuffledArray.map((el, index) => {
           return (
             <>
